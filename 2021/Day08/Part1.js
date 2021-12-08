@@ -7,8 +7,8 @@ function aoc(){
     for(o = 0; o < otpt.length; o++){
       switch(otpt[o].length){
         case 2:
-				case 3:
-				case 4:
+        case 3:
+        case 4:
         case 7: ttl++; break;
       }
     }

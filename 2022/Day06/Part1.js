@@ -8,5 +8,5 @@ function aoc() {
     idx++;
   }
 
-  console.log(idx + 5);
+  console.log(idx + 4);
 }

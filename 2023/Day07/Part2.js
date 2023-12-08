@@ -36,7 +36,7 @@ function aoc() {
     else if (RegExp(/(.)\1{2}(.)\2/).test(sortedHand) || RegExp(/(.)\1(.)\2{2}/).test(sortedHand)) {
       // Possible: 2 + 3 Joker || 3 + 2 Joker
       score = 4;
-      if (RegExp(/(.)[\1]{4}/).test(sortedHand.replace(/'0'/g, sortedHand[0])))
+      if (numJoker > 0)
         score = 6;
     }
 
@@ -83,6 +83,5 @@ function aoc() {
     ttl += hands[i].bet * (i + 1);
   }
 
-  console.log(hands);
   console.log(ttl);
 }

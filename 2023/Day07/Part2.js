@@ -5,7 +5,7 @@ function aoc() {
   inpt = inpt.replace(/A/g, 'Z');
   inpt = inpt.replace(/K/g, 'Y');
   inpt = inpt.replace(/Q/g, 'X');
-  inpt = inpt.replace(/J/g, 'W');
+  inpt = inpt.replace(/J/g, '0');
 
   inpt = inpt.split(/\n/g);
 
@@ -17,7 +17,7 @@ function aoc() {
     // Sort hand, high to low
     var sortedHand = hand.split('').sort().reverse().join('');
 
-    var numJoker = (sortedHand.match(/W/g) || []).length;
+    var numJoker = (sortedHand.match(/0/g) || []).length;
 
     var score = 0;
 
@@ -69,7 +69,7 @@ function aoc() {
     }
 
     hands.push({
-      cards: hand.replace(/W/g, '0'),
+      cards: hand,
       bet: parseInt(bet),
       score: score,
     })
